@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <style>
+  h1 {text-align: center;}
+  h2 {text-align: center;	
+	color: crimson}
+  h3 {text-align: center;
+	color:crimson}
+  h5 {text-align: center;
+	color:crimson}
+body {
+	font-family: Georgia, serif;
+	}
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align:center;
+	}
+
+footer {
+	bottom: 0;
+	position: fixed;
+}
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+  ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #9bc5f6;
+	}
+
+  li {
+	float: left;
+	}
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 8px 10px;
+	}
+  li a:hover:not(.active) {
+	background-color: #ff314e;
+	}
+
+  li a.active {
+	color: white;
+	background-color: #ff8d9d;
+	}
+
+
+
+	.collapsible {
+  background-color: #ff8d9d;
+  color: crimson;
+  cursor: pointer;
+  padding: 12px;
+  width: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color:#ff314e;
+  border-radius: 3px 3px 0 0;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active, .collapsible:hover {
+  background-color: #ff8d9d;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: crimson;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  width:49.9%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: pink;
+  border-style:solid;
+  border-color:crimson;
+  border-width:1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+  </style>
+
+<body style="background-color:pink;">
+	<div class="container">
+        <h1 style="color:crimson;">You're Back! &#127881;</h1>
+	<br>
+	<button class="collapsible">Screenshot of me telling you to text me!</button>
+	<div class="content">
+		<img src="IMG_1843.jpeg">
+	</div>
+		<br>
+	<h5> Honestly, I was just looking for random things to include for the quiz and I stumbled upon this. Thought it was funny because I had initiative one time! Anyway, since you passed the quiz, it's time for...</h5>
+	<br>
+
+<a href="invite.htm"><h3>Teleport!</h3></a>
+	</div>
+
+
+</body>
+
+<footer>
+	<ul>
+		<li><a href="index.htm">Welcome</a></li>
+		<li><a href="intro.htm">Intro</a></li>
+		<li><a class="active" href="timer2.htm">Teleport</a></li>
+	</ul>
+</footer>
+
+<script>
+
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+
+
+</html>

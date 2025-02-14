@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <style>
+  h1 {text-align: center;}
+  h2 {text-align: center;	
+	color: crimson}
+  h3 {text-align: center;
+	color:crimson}
+  body {
+	font-family: Georgia, serif;
+	}
+.container {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	text-align:center;
+}
+  footer {
+	bottom: 0;
+	position: fixed;
+	}
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+  ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #9bc5f6;
+	}
+
+  li {
+	float: left;
+	}
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 8px 10px;
+	}
+  li a:hover:not(.active) {
+	background-color: #ff314e;
+	}
+
+  li a.active {
+	color: white;
+	background-color: #ff8d9d;
+	}
+
+
+
+	.collapsible {
+  background-color: #ff8d9d;
+  color: crimson;
+  cursor: pointer;
+  padding: 12px;
+  width: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color:#ff314e;
+  border-radius: 3px 3px 0 0;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active, .collapsible:hover {
+  background-color: #ff8d9d;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: crimson;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  width:49.9%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: pink;
+  border-style:solid;
+  border-color:crimson;
+  border-width:1px;
+}
+
+  </style>
+
+<body style="background-color:pink;">
+	<div class="container">
+        <h1 style="color:crimson;">Success! &#127881;</h1>
+
+	<h2>In case you were wondering, here's some important things you should know! </h2>
+	<button class="collapsible">Valentine's day is...</button>
+	<div class="content">
+		<h2 style="color:crimson; text-align:center;" id="demo">...</h2><h2 style="color:crimson; text-align:center;">away!</h2>
+	</div>
+	<button class="collapsible">We started dating...</button>
+	<div class="content">
+		<h2>August 30th, 2023</h2>
+	</div>
+	<button class="collapsible">We first met online...</button>
+	<div class="content">
+		<h2>October 4th, 2022, on iMessage</h2>
+	</div>
+	<button class="collapsible">We first met in-person...</button>
+	<div class="content">
+		 <h2>October 8th, 2022, at KFT!</h2>
+	</div>
+	<button class="collapsible">You texted me first on...</button>
+	<div class="content">
+		<h3>Oct 11th, 2022, for help with WORDLE, where the word was "Jewel".</h3>
+	</div>
+	<button class="collapsible">I first came over...</button>
+	<div class="content">
+		<h3>Oct 16th, 2022, after my Cane's shift! It was raining and you said you'd accept me soggy, so I came over. I stayed till 4:30 a.m.</h3>
+	</div>
+	<button class="collapsible"></button>
+	<div class="content">
+		 <p data-toggle="modal" data-target="#myModal" color="crimson">CLICK ME</p>
+	</div>
+	</div>
+	
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ATTENTION!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>You have been selected to take a quiz. Please proceed to the quiz or else!</p>
+        </div>
+        <div class="modal-footer">
+          <form action="quiz.htm"><input type="submit" value="Quiz"></form>
+        </div>
+      </div>
+      
+    </div>
+
+</div>
+
+</body>
+
+<footer>
+	<ul>
+		<li><a href="index.htm">Welcome</a></li>
+		<li><a href="intro.htm">Intro</a></li>
+		<li><a class="active" href="timer.htm">Facts</a></li>
+	</ul>
+</footer>
+
+<script>
+	var countDownDate = new Date("Feb 14, 2025 00:00:00").getTime();
+	var x = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+		if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 10);
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+</html>

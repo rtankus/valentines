@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Valentine's Day</title>
+  </head>
+
+  <style>
+	
+  .text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align:center;
+}
+body {
+	font-family: Georgia, serif;
+	  background-image: url('bg.png');
+	}
+  h1 {text-align: center;
+	}
+ 
+  .button {
+	border: none;
+  	color: crimson;
+  	padding: 10px 20px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	margin: 1px 8px 8px;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+	}
+
+  .button1 {
+	background-color: pink;
+	color: crimson;
+	border: 2px solid #ff8d9d;
+	border-radius: 6px;
+	}
+
+  .button1:hover {
+	background-color: #ff8d9d;
+	color:white;
+	}
+
+  .button2 {
+	background-color: pink;
+	color: crimson;
+	border: 2px solid #ff8d9d;
+	border-radius: 6px;
+	}
+
+  .button2:hover {
+	background-color: #ff8d9d;
+	color:white;s
+	}
+	
+  </style>
+
+  <body style="background-color:pink; text-align:center;">
+	<div class="container">
+	<div class="text">
+	<h2 style="color:crimson;">Are you Judy?</h2>
+	<button class="button button1" onclick="myFunction()">Yes!</button>
+	<button class="button button2" onclick="alert('Are you sure?')">No!</button>
+	</div>
+	</div>
+	
+  </body>
+
+<script>
+	function myFunction(){
+		location.replace("index.htm")
+	}
+</script>
+
+</html>

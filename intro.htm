@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Valentine's Day</title>
+  </head>
+
+  <style>
+  h1 {text-align: center;}
+body {
+	font-family: Georgia, serif;
+	}
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align:center;
+}
+footer {
+	position: absolute;
+	bottom: 0%;
+}
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+  ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #9bc5f6;
+	bottom: 0%;
+	width: 100%;
+	}
+
+  li {
+	float: left;
+	}
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 8px 10px;
+	}
+  li a:hover:not(.active) {
+	background-color: #ff314e;
+	}
+
+  li a.active {
+	color: white;
+	background-color: #ff8d9d;
+	}
+
+  .button {
+	border: none;
+  	color: crimson;
+  	padding: 3px 6px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 12px;
+  	margin: 8px 8px 8px;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+	}
+  .button1 {
+	background-color: pink;
+	color: crimson;
+	border: 2px solid #ff8d9d;
+	border-radius: 6px;
+	}
+
+  .button1:hover {
+	background-color: #ff8d9d;
+	color:white;
+	}
+
+  </style>
+
+<body style="background-color:pink;">
+	<div class="container">
+    <h1 style="color:crimson;">Hi baby!</h1>
+	<h4>Only one person should be calling you this... </h4>
+ 	<label for="myInput">Enter name:</label>
+  <input type="text" id="myInput" placeholder="Type something...">
+  <button class = "button button1" onclick="checkInput()">Submit</button>
+	</div>
+
+
+	
+</body>
+
+<footer>
+	<ul>
+		<li><a href="index.htm">Welcome</a></li>
+		<li><a class="active" href="intro.htm">Intro</a></li>
+	</ul>
+</footer>
+
+<script>
+	function checkInput() {
+      var userInput = document.getElementById("myInput").value; // Get input value
+      var targetWord = "raina"; // The word that triggers the redirect
+      if (userInput === targetWord) {
+        window.location.href = "timer.htm";
+      } else {
+        alert("Input does not match the target word!");
+      }
+    }
+
+	
+
+</script>
+
+
+</html>
